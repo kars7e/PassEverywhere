@@ -18,3 +18,10 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
+
+macx: LIBS += -L$$PWD/cryptopp562/ -lcryptopp
+
+INCLUDEPATH += $$PWD/cryptopp562
+DEPENDPATH += $$PWD/cryptopp562
+
+macx: PRE_TARGETDEPS += $$PWD/cryptopp562/libcryptopp.a
